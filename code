@@ -1,3 +1,15 @@
+#import libraries
+import cv2
+import matplotlib.pyplot as plt
+import numpy as np
+
+#import image and change to greyscale
+path='/dir' #dir to image location
+filename='Dumbo.jpg'
+img=cv2.imread(path+'/'+filename)
+gray_img=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+
+
 #convert image into 3 regions with r,g,b patches
 #red mask
 h_red=int(gray_img.shape[0])
